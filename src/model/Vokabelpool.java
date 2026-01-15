@@ -73,4 +73,14 @@ public class Vokabelpool implements Serializable {
         if (vokabeln.length == 0) return null;
         return vokabeln[new Random().nextInt(vokabeln.length)];
     }
+    public void entfernen(Vokabeldatensatz target) {
+        if (target == null) return;
+        Vokabeldatensatz[] neu = new Vokabeldatensatz[Math.max(0, vokabeln.length - 1)];
+        int idx = 0;
+        for (Vokabeldatensatz v : vokabeln) {
+            if (v == target) continue;
+            if (idx < neu.length) neu[idx++] = v;
+        }
+        vokabeln = (idx == neu.length) ? neu : java.util.Arrays.copyOf(neu, idx);
+    }
 }
