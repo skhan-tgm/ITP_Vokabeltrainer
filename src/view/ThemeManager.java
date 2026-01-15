@@ -27,7 +27,7 @@ public class ThemeManager {
             fieldBg = new Color(55, 55, 55);
 
             buttonBg = new Color(70, 70, 70);
-            buttonFg = Color.WHITE; // gut lesbar
+            buttonFg = Color.BLACK; // gut lesbar
         } else {
             bg = UIManager.getColor("Panel.background");
             panel = UIManager.getColor("Panel.background");
