@@ -36,7 +36,6 @@ public class Vokabelpool implements Serializable {
             e.printStackTrace();
         }
     }
-
     public void laden() {
         File f = new File(DATEI);
         if (!f.exists()) return;
@@ -64,11 +63,9 @@ public class Vokabelpool implements Serializable {
             e.printStackTrace();
         }
     }
-
     public Vokabeldatensatz[] getVokabeln() {
         return vokabeln;
     }
-
     public Vokabeldatensatz getZufälligeVokabel() {
         if (vokabeln.length == 0) return null;
         return vokabeln[new Random().nextInt(vokabeln.length)];
